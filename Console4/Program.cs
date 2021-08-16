@@ -53,9 +53,9 @@ namespace Console4
 
                 // Square // 
 
-            for (int i = 0; i <= 50; i++)
+            for (int i = 0; i <= 25; i++)
             {
-            System.Console.Write("*");
+            System.Console.Write("* ");
             }
 
             System.Console.WriteLine();
@@ -86,47 +86,116 @@ namespace Console4
            }
 
 
-            for (int i = 0; i <= 50; i++)
+            for (int i = 0; i <= 25; i++)
 
             {
-            System.Console.Write("*");
+            System.Console.Write("* ");
             }
             
             System.Console.WriteLine();
             System.Console.WriteLine();
 
-                // Right triangle //
+        // Right triangle //
 
-            int val = 10;  
-            int g, r;  
-            for (g = 1; g <= val; g++)  
+          for ( int i = 1; i <= 7; i++ ){
+                        if ( i == 1 || i == 7 ){
+                            if ( i == 1 ){
+                                Console.Write("*"); 
+                            }
+                            else{
+                                for ( int j = 1; j <= 13; j++ ){
+                                    Console.Write("*"); 
+                                }
+                            }
+                            Console.Write("\n"); 
+                        }
+                        else{
+                            Console.Write("*"); 
+                            for ( int j = 1; j <= i-1; j++ ){
+                                Console.Write("  "); 
+                            }
+                            Console.Write("*\n"); 
+                        }
+                    }
+                    {   
+                    
 
-            {  
-
-             for (r = 1; r <= g; r++)  
-             {  
-               Console.Write("*");  
-             }  
-
-             Console.WriteLine("");
-
-            }  
-
-            System.Console.WriteLine();
-            System.Console.WriteLine();
 
 
+        // Triangle
+        
+for ( int i = 1; i <= 5; i++ ){
+                            if ( i == 1){
+                                for ( int j = 1; j <= 9; j++ ){
+                                    if ( j == 6 ){
+                                        Console.Write('*'); 
+                                    }
+                                    else{
+                                        Console.Write(" "); 
+                                    }
+                                }
+                                Console.Write("\n"); 
+                            }
+                            else if ( i == 5 ){
+                                for ( int j = 1; j <= 11; j++ ){
+                                    Console.Write("*"); 
+                                }
+                                Console.Write("\n"); 
+                            }
+                            else{
+                                int r = 6 - i; 
+                                int l = 6 + i; 
+                                for ( int j = 1; j <= 10; j++ ){
+                                    if ( j == r || j == l ){
+                                        Console.Write("*"); 
+                                    }else{
+                                        Console.Write(" "); 
+                                    }
+                                }
+                                Console.Write("\n"); 
+                            }
+                        }
+                    }
 
+                    {
 
-        // Остальные фигуры не получились
+            // Rhomb
 
+            {
+                        
+                        int l = 8, r = 8; 
+                        for ( int i = 1; i <= 3; i++ ){
+                            for ( int j = 1; j <= 16; j++ ){
+                                if ( l == j || r == j ){
+                                System.Console.Write("*");
+                                }
+                                else{
+                                System.Console.Write(" ");
+                                }
+                            }
+                            Console.Write("\n"); 
+                            l-=2; r+=2; 
+                        } 
+                        l = 8+(3*-2); r = (8+3*2); 
+                        for ( int i = 4; i >= 1; i-- ){
+                            for ( int j = 1; j <= 14; j++ ){
+                                if ( l == j || r == j ){
+                                System.Console.Write("*");
+                                }
+                                else{
+                                System.Console.Write(" ");
+                                }
+                            }
+                            Console.Write("\n"); 
+                            l+=2; r-=2; 
+                        } 
               
 
         // Task 3  //
 
 
-             System.Console.WriteLine ("Task 3");
-             System.Console.WriteLine ();
+            System.Console.WriteLine ("Task 3");
+            System.Console.WriteLine ();
             System.Console.Write ("Enter P: % ");
             double.TryParse(Console.ReadLine(), out double p);
 
@@ -147,6 +216,7 @@ namespace Console4
 
 
         }    
-        
+        }
     }
+}
 }
